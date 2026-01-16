@@ -230,7 +230,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.slice(0, 2).map((project, index) => (
+            {featuredProjects.slice(0, 3).map((project, index) => (
               <ProjectCard
                 key={project.slug}
                 title={project.title}
@@ -240,16 +240,6 @@ export default function HomePage() {
                 index={index}
               />
             ))}
-            {featuredProjects[2] && (
-              <ProjectCard
-                title={featuredProjects[2].title}
-                description={featuredProjects[2].description}
-                image={featuredProjects[2].image}
-                href={`/projects/${featuredProjects[2].slug}`}
-                featured={true}
-                index={2}
-              />
-            )}
           </div>
         </div>
       </section>

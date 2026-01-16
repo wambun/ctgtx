@@ -17,60 +17,36 @@ export const ProjectCard = ({
   description,
   image,
   href,
-  featured = false,
 }: ProjectCardProps) => {
-  if (featured) {
-    return (
-      <div className="group relative overflow-hidden rounded-xl">
-        <Link href={href} className="block">
-          <div
-            className="relative aspect-[16/10] overflow-hidden bg-gray-200"
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary-500/90 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">{title}</h3>
-              {description && (
-                <p className="text-gray-200 text-sm mb-3 line-clamp-2">
-                  {description}
-                </p>
-              )}
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary-300 transition-colors">
-                About project
-                <ArrowRight className="w-4 h-4" />
-              </span>
-            </div>
-          </div>
-        </Link>
-      </div>
-    );
-  }
-
+  // All cards now use the same overlay style with text on top of the image
   return (
-    <div className="group">
+    <div className="group relative overflow-hidden rounded-xl">
       <Link href={href} className="block">
         <div
-          className="relative aspect-[4/3] overflow-hidden rounded-xl mb-4 bg-gray-200"
+          className="relative aspect-[4/3] overflow-hidden bg-gray-200"
           style={{
             backgroundImage: `url(${image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-        />
-        <h3 className="text-lg font-bold text-secondary-500 mb-2 group-hover:text-primary-500 transition-colors">
-          {title}
-        </h3>
-        {description && (
-          <p className="text-gray-600 text-sm mb-3 line-clamp-2">{description}</p>
-        )}
-        <span className="inline-flex items-center gap-2 text-sm font-medium text-secondary-500 group-hover:text-primary-500 transition-colors">
-          About project
-          <ArrowRight className="w-4 h-4 text-primary-500" />
-        </span>
+        >
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary-500/95 via-secondary-500/40 to-transparent group-hover:from-primary-500/95 group-hover:via-primary-500/40 transition-all duration-300" />
+
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+            <h3 className="text-lg font-bold mb-1 line-clamp-1">{title}</h3>
+            {description && (
+              <p className="text-gray-200 text-sm mb-3 line-clamp-2 opacity-90">
+                {description}
+              </p>
+            )}
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-white/90 group-hover:text-white transition-colors">
+              View project
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </div>
+        </div>
       </Link>
     </div>
   );
