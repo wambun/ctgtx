@@ -107,7 +107,7 @@ export default function PartnersPage() {
       <Hero
         title="Our Partners"
         description="We partner with industry-leading manufacturers to deliver the highest quality technology solutions. These partnerships enable us to provide cutting-edge products with certified expertise."
-        backgroundVideo="/images/hero/partners-hero.mp4"
+        backgroundImage="/images/partners-hero.jpg"
         align="center"
       />
 
