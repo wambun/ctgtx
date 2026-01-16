@@ -1,18 +1,18 @@
-/* Configure colors at https://shipixen.com/color-theme-explorer-shadcn */
+/* CTG Brand Colors - Brentor Design System */
 const colors = {
   primary: {
-    lighter: '#fde047',
-    light: '#facc15',
-    main: '#eab308',
-    dark: '#ca8a04',
-    darker: '#a16207',
+    lighter: '#FEA06B',
+    light: '#F7813D',
+    main: '#F26522',
+    dark: '#D9561A',
+    darker: '#B84612',
   },
   secondary: {
-    lighter: '#6ee7b7',
-    light: '#34d399',
-    main: '#10b981',
-    dark: '#059669',
-    darker: '#047857',
+    lighter: '#3A4D6E',
+    light: '#2A3C5C',
+    main: '#1A2B4A',
+    dark: '#142238',
+    darker: '#0E1926',
   },
 };
 

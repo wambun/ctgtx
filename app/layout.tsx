@@ -4,6 +4,8 @@ import { ThemeProviders } from './theme-providers';
 import { Metadata } from 'next';
 
 import { colors } from '@/data/config/colors.js';
+import { Navigation } from '@/components/ctg/Navigation';
+import { Footer } from '@/components/ctg/Footer';
 
 import '@/css/globals.css';
 import { SearchProvider } from '@/components/shared/SearchProvider';
@@ -112,10 +114,9 @@ export default function RootLayout({
         <link
           rel="mask-icon"
           href="/static/favicons/safari-pinned-tab.svg"
-          color="#5bbad5"
+          color="#F26522"
         />
-        <meta name="generator" content="Shipixen" />
-        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileColor" content="#F26522" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"
@@ -124,22 +125,21 @@ export default function RootLayout({
         <meta
           name="theme-color"
           media="(prefers-color-scheme: dark)"
-          content="#000"
+          content="#1A2B4A"
         />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
 
-      <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">
+      <body className="flex flex-col bg-white text-gray-900 antialiased min-h-screen">
         <ThemeProviders>
           <AnalyticsWrapper />
-
-          <div className="w-full flex flex-col justify-between items-center font-sans">
-            <SearchProvider>
-              <main className="w-full flex flex-col items-center mb-auto">
-                {children}
-              </main>
-            </SearchProvider>
-          </div>
+          <Navigation />
+          <SearchProvider>
+            <main className="flex-1">
+              {children}
+            </main>
+          </SearchProvider>
+          <Footer />
         </ThemeProviders>
       </body>
     </html>

@@ -1,0 +1,16 @@
+{
+  "markdown": "# 5TH ANNUAL CUSTOMER APPRECIATION GOLF TOURNAMENT\n\n# All Clients Are Welcome To Participate\n\nPlease respond to Brad Heebsh and Kamrynn Roberts to confirm participation by October 1st.\n\n[Bradh@ctgtx.com](mailto:Bradh@ctgtx.com) [Kamrynnr@ctgtx.com](mailto:Kamrynnr@ctgtx.com)\n\n# WHEN\n\n# Friday, October 14th, 2022\n\nRegistration starts at 7 am, and shotgun start at 8 am\n\nBreakfast, lunch, and golf will be provided\n\nQualify for raffle giveaways for Veteran\n\n- related charities\n\n# WHERE\n\n# Indian Creek Golf Course\n\n1650 W. Frankford Rd., Carrollton, TX 75007\n\n# BENEFITTING",
+  "metadata": {
+    "scrapeId": "019bc431-5251-7698-940c-948bd2edb720",
+    "sourceURL": "https://ctgtx.com/app/uploads/2022/11/Golf_flyer_client.pdf",
+    "url": "https://ctgtx.com/app/uploads/2022/11/Golf_flyer_client.pdf",
+    "statusCode": 200,
+    "numPages": 1,
+    "proxyUsed": "basic",
+    "cacheState": "miss",
+    "indexId": "5311d697-abcb-4200-b9ee-e78762b65ab3",
+    "creditsUsed": 1
+  },
+  "html": "<html><body><h1>5TH ANNUAL CUSTOMER APPRECIATION GOLF TOURNAMENT</h1>\n<h1>All Clients Are Welcome To Participate</h1>\n<p>Please respond to Brad Heebsh and Kamrynn Roberts to confirm participation by October 1st.</p>\n<p><a href=\"mailto:Bradh@ctgtx.com\">Bradh@ctgtx.com</a> <a href=\"mailto:Kamrynnr@ctgtx.com\">Kamrynnr@ctgtx.com</a></p>\n<h1>WHEN</h1>\n<h1>Friday, October 14th, 2022</h1>\n<p>Registration starts at 7 am, and shotgun start at 8 am<br>Breakfast, lunch, and golf will be provided<br>Qualify for raffle giveaways for Veteran   </p>\n<ul>\n<li>related charities</li>\n</ul>\n<h1>WHERE</h1>\n<h1>Indian Creek Golf Course</h1>\n<p>1650 W. Frankford Rd., Carrollton, TX 75007</p>\n<h1>BENEFITTING</h1>\n</body></html>",
+  "warning": "This scrape job was throttled at your current concurrency limit. If you'd like to scrape faster, you can upgrade your plan."
+}
