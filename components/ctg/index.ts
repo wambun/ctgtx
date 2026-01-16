@@ -9,3 +9,4 @@ export { StatsSection } from './StatsSection';
 export { PartnerLogo } from './PartnerLogo';
 export { Hero } from './Hero';
 export { CTASection } from './CTASection';
+export { PartnerCarousel } from './PartnerCarousel';

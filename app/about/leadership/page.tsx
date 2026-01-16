@@ -30,60 +30,60 @@ export default function LeadershipPage() {
             className="mb-16"
           />
 
-          <div className="space-y-16">
+          <div className="space-y-12 lg:space-y-16">
             {team.map((member, index) => (
               <div
                 key={member.name}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch max-w-5xl mx-auto"
               >
-                {/* Image - smaller size for better resolution */}
+                {/* Photo Card */}
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="max-w-xs mx-auto lg:max-w-sm">
-                    <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
-                      <div
-                        className="w-full h-full bg-cover bg-top bg-gray-200"
-                        style={{ backgroundImage: `url(${member.image})` }}
-                      />
-                    </div>
-                  </div>
+                  <div
+                    className="h-full min-h-[400px] rounded-2xl overflow-hidden bg-gray-100 shadow-lg"
+                    style={{
+                      backgroundImage: `url(${member.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'top center',
+                    }}
+                  />
                 </div>
 
-                {/* Content */}
+                {/* Info Card */}
                 <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="bg-primary-500/10 rounded-xl p-8">
-                    <span className="text-primary-500 text-sm uppercase tracking-wider">
-                      {member.title}
-                    </span>
-                    <h2 className="mt-2 text-3xl font-bold text-secondary-500">
-                      {member.name}
-                    </h2>
+                  <div className="h-full min-h-[400px] bg-primary-500/10 rounded-2xl p-8 flex flex-col">
+                    <div>
+                      <span className="text-primary-500 text-sm uppercase tracking-wider font-medium">
+                        {member.title}
+                      </span>
+                      <h2 className="mt-2 text-2xl lg:text-3xl font-bold text-secondary-500">
+                        {member.name}
+                      </h2>
+                    </div>
 
-                    <div className="mt-6 space-y-4">
+                    <div className="mt-5 space-y-3 flex-1">
                       {member.bio.map((paragraph, pIndex) => (
-                        <p key={pIndex} className="text-gray-600">
+                        <p key={pIndex} className="text-gray-600 text-sm leading-relaxed">
                           {paragraph}
                         </p>
                       ))}
+
+                      {member.about && (
+                        <div className="mt-4 pt-4 border-t border-primary-500/20">
+                          <h4 className="font-medium text-secondary-500 text-sm mb-2">
+                            About {member.name.split(' ')[0]}
+                          </h4>
+                          <ul className="space-y-1">
+                            {member.about.map((item, aIndex) => (
+                              <li key={aIndex} className="text-sm text-gray-600">
+                                • {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
 
-                    {member.about && (
-                      <div className="mt-6">
-                        <h4 className="font-medium text-secondary-500 mb-2">
-                          About {member.name.split(' ')[0]}
-                        </h4>
-                        <ul className="space-y-1">
-                          {member.about.map((item, aIndex) => (
-                            <li key={aIndex} className="text-sm text-gray-600">
-                              • {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    <div className="mt-6 pt-6 border-t border-gray-200 flex flex-wrap gap-4">
+                    <div className="mt-6 pt-4 border-t border-primary-500/20 flex flex-wrap gap-4">
                       <a
                         href={`tel:${member.phone}`}
                         className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-primary-500 transition-colors"

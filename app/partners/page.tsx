@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import {
   Hero,
   SectionHeader,
   Button,
   CTASection,
+  PartnerCarousel,
 } from '@/components/ctg';
 
 const partners = [
@@ -26,7 +26,7 @@ const partners = [
   },
   {
     name: 'Panduit',
-    logo: '/images/partners/panduit.png',
+    logo: '/images/partners/panduit.jpg',
     description: 'World-class structured cabling and network infrastructure.',
   },
   {
@@ -69,6 +69,16 @@ const partners = [
     logo: '/images/partners/extron.png',
     description: 'Professional AV system integration products.',
   },
+  {
+    name: 'Digital Watchdog',
+    logo: '/images/partners/digitalwatchdog.jpg',
+    description: 'Video surveillance and security solutions.',
+  },
+  {
+    name: 'Kantech',
+    logo: '/images/partners/kantech.jpg',
+    description: 'Access control and security systems.',
+  },
 ];
 
 const partnerBenefits = [
@@ -101,7 +111,7 @@ export default function PartnersPage() {
         align="center"
       />
 
-      {/* Partners Grid Section */}
+      {/* Partners Carousel Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
@@ -112,29 +122,8 @@ export default function PartnersPage() {
             className="mb-16"
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {partners.map((partner, index) => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-primary-500/20 transition-all group"
-              >
-                <div className="h-16 flex items-center justify-center mb-4 grayscale group-hover:grayscale-0 transition-all">
-                  <div className="text-2xl font-bold text-gray-400 group-hover:text-secondary-500 transition-colors">
-                    {partner.name}
-                  </div>
-                </div>
-                <h3 className="font-bold text-secondary-500 text-center mb-2">
-                  {partner.name}
-                </h3>
-                <p className="text-sm text-gray-500 text-center">
-                  {partner.description}
-                </p>
-              </motion.div>
-            ))}
+          <div className="max-w-5xl mx-auto px-8 lg:px-16">
+            <PartnerCarousel partners={partners} autoPlay={true} interval={4000} />
           </div>
         </div>
       </section>
@@ -143,12 +132,7 @@ export default function PartnersPage() {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div>
               <span className="text-primary-500 text-sm uppercase tracking-wider">
                 Why It Matters
               </span>
@@ -162,33 +146,21 @@ export default function PartnersPage() {
               </p>
 
               <div className="mt-8 space-y-6">
-                {partnerBenefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit.title}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                  >
+                {partnerBenefits.map((benefit) => (
+                  <div key={benefit.title}>
                     <h4 className="font-bold text-secondary-500">{benefit.title}</h4>
                     <p className="mt-1 text-gray-600 text-sm">{benefit.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100"
-            >
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: 'url(/images/partnerships.jpg)' }}
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,13 +168,7 @@ export default function PartnersPage() {
       {/* Become a Partner Section */}
       <section className="py-20 lg:py-28 bg-secondary-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
-          >
+          <div className="max-w-2xl mx-auto">
             <span className="text-gray-400 text-sm uppercase tracking-wider">
               Partner With Us
             </span>
@@ -223,7 +189,7 @@ export default function PartnersPage() {
                 Contact Us About Partnership
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -232,7 +198,7 @@ export default function PartnersPage() {
         title="Ready to leverage our partnerships?"
         description="Contact us today to learn how our partner relationships can benefit your next project."
         primaryCta={{ text: 'Schedule Free Consultation', href: '/free-consultation' }}
-        stat={{ value: '12+', label: 'Industry-leading partners' }}
+        stat={{ value: '14+', label: 'Industry-leading partners' }}
         image="/images/cta-bg.jpg"
       />
     </>
