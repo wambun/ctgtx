@@ -219,8 +219,7 @@ export default function ContactPage() {
                   </p>
                   <Button
                     href="/free-consultation"
-                    variant="outline"
-                    className="border-white text-white hover:bg-white hover:text-secondary-500"
+                    variant="outline-white"
                   >
                     Schedule Free Consultation
                   </Button>

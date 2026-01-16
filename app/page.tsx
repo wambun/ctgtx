@@ -78,7 +78,7 @@ export default function HomePage() {
                 cutting-edge technology, and a commitment to quality craftsmanship.
               </p>
               <div className="mt-8">
-                <Button href="/about" variant="outline" className="border-white text-white hover:bg-white hover:text-secondary-500">
+                <Button href="/about" variant="outline-white">
                   About CTG
                 </Button>
               </div>

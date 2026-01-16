@@ -39,9 +39,8 @@ export const CTASection = ({
               <div className="mt-8">
                 <Button
                   href={primaryCta.href}
-                  variant="secondary"
+                  variant="white"
                   size="lg"
-                  className="bg-white text-primary-500 hover:bg-gray-100"
                 >
                   {primaryCta.text}
                 </Button>

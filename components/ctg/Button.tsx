@@ -6,7 +6,7 @@ import clsx from 'clsx';
 
 interface ButtonProps {
   href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'white' | 'outline-white';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   className?: string;
@@ -41,6 +41,8 @@ export const Button = ({
     outline:
       'bg-white text-primary-500 border-2 border-primary-500 hover:bg-primary-50',
     ghost: 'text-secondary-500 hover:text-primary-500 hover:bg-gray-50',
+    white: 'bg-white text-primary-500 hover:bg-gray-100 hover:shadow-lg',
+    'outline-white': 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-secondary-500',
   };
 
   const classes = clsx(

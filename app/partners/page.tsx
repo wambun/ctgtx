@@ -183,8 +183,7 @@ export default function PartnersPage() {
             <div className="mt-8">
               <Button
                 href="/contact"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-secondary-500"
+                variant="outline-white"
               >
                 Contact Us About Partnership
               </Button>

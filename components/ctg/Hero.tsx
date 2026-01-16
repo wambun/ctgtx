@@ -126,7 +126,7 @@ export const Hero = ({
                 </Button>
               )}
               {secondaryCta && (
-                <Button href={secondaryCta.href} variant="ghost" size="lg" className="text-white hover:bg-white/10">
+                <Button href={secondaryCta.href} variant="outline-white" size="lg">
                   {secondaryCta.text}
                 </Button>
               )}
