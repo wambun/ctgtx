@@ -41,7 +41,7 @@ export default function HomePage() {
         description="Our mission is to utilize our extensive market and industry experience and expertise to deliver concrete business results enabling our clients to profit from the advanced use of information transport systems and solutions."
         primaryCta={{ text: 'Schedule Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ text: 'Learn more about us', href: '/about' }}
-        backgroundVideo="/images/hero/hero-video.mp4"
+        backgroundImage="/images/hero/hero-bg.jpg"
         size="large"
       />
 
