@@ -6,23 +6,11 @@ import { footerLinks } from '@/data/config/footerLinks';
 
 const CTGLogo = () => (
   <Link href="/" className="flex items-center gap-2">
-    <div className="flex items-center">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="text-primary-500"
-      >
-        <rect width="32" height="8" rx="2" fill="currentColor" />
-        <rect y="12" width="24" height="8" rx="2" fill="currentColor" />
-        <rect y="24" width="32" height="8" rx="2" fill="currentColor" />
-      </svg>
-      <span className="ml-2 text-xl font-bold text-secondary-500">
-        <span className="text-primary-500">Connect</span> Technology Group
-      </span>
-    </div>
+    <img
+      src="/images/logos/ctg-logo-color.png"
+      alt="Connect Technology Group"
+      className="h-10 w-auto"
+    />
   </Link>
 );
 

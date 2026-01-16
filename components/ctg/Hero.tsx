@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Button } from './Button';
 import clsx from 'clsx';
 
@@ -17,6 +16,7 @@ interface HeroProps {
     href: string;
   };
   backgroundImage?: string;
+  backgroundVideo?: string;
   overlay?: boolean;
   align?: 'left' | 'center';
   size?: 'default' | 'large';
@@ -29,6 +29,7 @@ export const Hero = ({
   primaryCta,
   secondaryCta,
   backgroundImage,
+  backgroundVideo,
   overlay = true,
   align = 'left',
   size = 'default',
@@ -53,10 +54,10 @@ export const Hero = ({
       className={clsx(
         'relative w-full overflow-hidden',
         size === 'large' ? 'min-h-[90vh]' : 'min-h-[60vh]',
-        backgroundImage ? 'text-white' : 'bg-secondary-500 text-white'
+        (backgroundImage || backgroundVideo) ? 'text-white' : 'bg-secondary-500 text-white'
       )}
       style={
-        backgroundImage
+        backgroundImage && !backgroundVideo
           ? {
               backgroundImage: `url(${backgroundImage})`,
               backgroundSize: 'cover',
@@ -65,6 +66,19 @@ export const Hero = ({
           : {}
       }
     >
+      {/* Video Background */}
+      {backgroundVideo && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      )}
+
       {/* Overlay */}
       {overlay && (
         <div className="absolute inset-0 bg-secondary-500/70" />

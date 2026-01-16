@@ -29,7 +29,7 @@ export const team: TeamMember[] = [
   {
     name: 'John Dermody',
     title: 'VP of Operations',
-    image: '/images/team/john-dermody.jpg',
+    image: '/images/team/john-dermody.png',
     bio: [
       'John Dermody is a 24 year operations professional in the information and communications technology (ICT) community.',
       "John's primary responsibility is as a telecommunications designer for Northrup Grumman mission critical data centers.",
@@ -60,7 +60,7 @@ export const team: TeamMember[] = [
   {
     name: 'Brad Heebsh',
     title: 'VP of Sales',
-    image: '/images/team/brad-heebsh.jpg',
+    image: '/images/team/brad-heebsh.png',
     bio: [
       'Brad Heebsh is a partner of Connect Technology Group, the Carrollton, Texas based company.',
       'Responsibilities include business development, strategic accounts growth, commitment to service and focus on client solutions.',

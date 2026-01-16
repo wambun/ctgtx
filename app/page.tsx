@@ -24,10 +24,10 @@ const stats = [
 const partnerLogos = [
   { name: 'Sharp', logo: '/images/partners/sharp.png' },
   { name: 'LG', logo: '/images/partners/lg.png' },
-  { name: 'Samsung', logo: '/images/partners/samsung.png' },
-  { name: 'Panduit', logo: '/images/partners/panduit.png' },
-  { name: 'Verkada', logo: '/images/partners/verkada.png' },
   { name: 'APC', logo: '/images/partners/apc.png' },
+  { name: 'Panduit', logo: '/images/partners/panduit.jpg' },
+  { name: 'Kantech', logo: '/images/partners/kantech.jpg' },
+  { name: 'Digital Watchdog', logo: '/images/partners/digitalwatchdog.jpg' },
 ];
 
 export default function HomePage() {
@@ -41,7 +41,7 @@ export default function HomePage() {
         description="Our mission is to utilize our extensive market and industry experience and expertise to deliver concrete business results enabling our clients to profit from the advanced use of information transport systems and solutions."
         primaryCta={{ text: 'Schedule Free Consultation', href: '/free-consultation' }}
         secondaryCta={{ text: 'Learn more about us', href: '/about' }}
-        backgroundImage="/images/hero-bg.jpg"
+        backgroundVideo="/images/hero/hero-video.mp4"
         size="large"
       />
 
@@ -266,9 +266,11 @@ export default function HomePage() {
                 key={partner.name}
                 className="h-12 w-24 md:h-16 md:w-32 relative grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
               >
-                <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm font-medium">
-                  {partner.name}
-                </div>
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-full h-full object-contain"
+                />
               </div>
             ))}
           </div>
