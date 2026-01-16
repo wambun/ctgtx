@@ -90,7 +90,7 @@ export default function HomePage() {
       {/* What We Focus On Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
                 label="What we focus on"
@@ -113,7 +113,7 @@ export default function HomePage() {
             </div>
 
             <div
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gray-200"
+              className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200"
               style={{ backgroundImage: 'url(/images/focus-image.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
             />
           </div>
