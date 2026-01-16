@@ -66,6 +66,9 @@ export const Hero = ({
           : {}
       }
     >
+      {/* Fallback background color/image */}
+      <div className="absolute inset-0 bg-secondary-500" />
+
       {/* Video Background */}
       {backgroundVideo && (
         <video
@@ -73,7 +76,8 @@ export const Hero = ({
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover z-[1]"
         >
           <source src={backgroundVideo} type="video/mp4" />
         </video>
@@ -81,7 +85,7 @@ export const Hero = ({
 
       {/* Overlay */}
       {overlay && (
-        <div className="absolute inset-0 bg-secondary-500/70" />
+        <div className="absolute inset-0 bg-secondary-500/70 z-[2]" />
       )}
 
       {/* Content */}

@@ -8,7 +8,7 @@ const ContentSecurityPolicy = `
   script-src 'self' 'unsafe-eval' 'unsafe-inline' *.vercel-analytics.com *.vercel-scripts.com *.cloudflareinsights.com;
   style-src 'self' 'unsafe-inline';
   img-src *.supabase.co * blob: data:;
-  media-src *.s3.amazonaws.com *.shipixen.com;
+  media-src 'self' *.s3.amazonaws.com *.shipixen.com;
   connect-src *;
   font-src 'self';
 `;
