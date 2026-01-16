@@ -56,18 +56,17 @@ export const Hero = ({
         size === 'large' ? 'min-h-[90vh]' : 'min-h-[60vh]',
         (backgroundImage || backgroundVideo) ? 'text-white' : 'bg-secondary-500 text-white'
       )}
-      style={
-        backgroundImage && !backgroundVideo
-          ? {
-              backgroundImage: `url(${backgroundImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }
-          : {}
-      }
     >
-      {/* Fallback background color/image */}
-      <div className="absolute inset-0 bg-secondary-500" />
+      {/* Fallback background color */}
+      <div className="absolute inset-0 bg-secondary-500 z-0" />
+
+      {/* Background Image */}
+      {backgroundImage && !backgroundVideo && (
+        <div
+          className="absolute inset-0 z-[1] bg-cover bg-center"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        />
+      )}
 
       {/* Video Background */}
       {backgroundVideo && (
@@ -85,7 +84,7 @@ export const Hero = ({
 
       {/* Overlay */}
       {overlay && (
-        <div className="absolute inset-0 bg-secondary-500/70 z-[2]" />
+        <div className="absolute inset-0 bg-secondary-500/60 z-[2]" />
       )}
 
       {/* Content */}
