@@ -107,7 +107,7 @@ export default function PartnersPage() {
       <Hero
         title="Our Partners"
         description="We partner with industry-leading manufacturers to deliver the highest quality technology solutions. These partnerships enable us to provide cutting-edge products with certified expertise."
-        backgroundImage="/images/partners-hero.jpg"
+        backgroundVideo="/images/hero/partners-hero.mp4"
         align="center"
       />
 
@@ -122,8 +122,8 @@ export default function PartnersPage() {
             className="mb-16"
           />
 
-          <div className="max-w-5xl mx-auto px-8 lg:px-16">
-            <PartnerCarousel partners={partners} autoPlay={true} interval={4000} />
+          <div className="w-full max-w-[75vw] mx-auto">
+            <PartnerCarousel partners={partners} speed={40} />
           </div>
         </div>
       </section>
