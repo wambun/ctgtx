@@ -1,11 +1,11 @@
-/* CTG Brand Colors - Brentor Design System */
+/* CTG Brand Colors - Matching Logo Red */
 const colors = {
   primary: {
-    lighter: '#FEA06B',
-    light: '#F7813D',
-    main: '#F26522',
-    dark: '#D9561A',
-    darker: '#B84612',
+    lighter: '#B83A3F',
+    light: '#9E2A2F',
+    main: '#86191e',
+    dark: '#6E1419',
+    darker: '#560F14',
   },
   secondary: {
     lighter: '#3A4D6E',

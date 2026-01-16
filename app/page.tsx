@@ -158,7 +158,7 @@ export default function HomePage() {
         {/* Decorative element */}
         <div className="absolute left-0 top-1/2 -translate-y-1/2 w-48 lg:w-64 opacity-20">
           <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 0L200 100L100 200L0 100L100 0Z" fill="#F26522" />
+            <path d="M100 0L200 100L100 200L0 100L100 0Z" fill="#86191e" />
             <path d="M100 200L200 300L100 400L0 300L100 200Z" fill="white" />
           </svg>
         </div>

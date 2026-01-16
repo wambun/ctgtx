@@ -114,9 +114,9 @@ export default function RootLayout({
         <link
           rel="mask-icon"
           href="/static/favicons/safari-pinned-tab.svg"
-          color="#F26522"
+          color="#86191e"
         />
-        <meta name="msapplication-TileColor" content="#F26522" />
+        <meta name="msapplication-TileColor" content="#86191e" />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"

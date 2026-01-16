@@ -1,7 +1,7 @@
 {
-  "name": "Your App",
-  "short_name": "Your App",
-  "description": "Your app description",
+  "name": "Connect Technology Group",
+  "short_name": "CTG",
+  "description": "Technology solutions with excellence - Audio/Visual, Electrical, Security, and Cabling services",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
@@ -9,7 +9,7 @@
   "scope": "/",
   "start_url": "/?homescreen=1",
   "background_color": "#fff",
-  "theme_color": "#fff",
+  "theme_color": "#86191e",
   "icons": [
     {
       "src": "/static/favicons/android-chrome-36x36.png",

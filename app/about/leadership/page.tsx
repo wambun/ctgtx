@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Mail, Phone } from 'lucide-react';
 import {
   Hero,
@@ -16,7 +15,7 @@ export default function LeadershipPage() {
       <Hero
         title="Our Leadership Team"
         description="Meet the experienced professionals who lead Connect Technology Group with decades of combined industry expertise."
-        backgroundImage="/images/leadership-hero.jpg"
+        backgroundImage="/images/services/audio-visual.jpg"
         align="center"
       />
 
@@ -33,23 +32,21 @@ export default function LeadershipPage() {
 
           <div className="space-y-16">
             {team.map((member, index) => (
-              <motion.div
+              <div
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`grid lg:grid-cols-2 gap-12 items-center ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
-                {/* Image */}
+                {/* Image - smaller size for better resolution */}
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100">
-                    <div
-                      className="w-full h-full bg-cover bg-center bg-gray-200"
-                      style={{ backgroundImage: `url(${member.image})` }}
-                    />
+                  <div className="max-w-xs mx-auto lg:max-w-sm">
+                    <div className="aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-lg">
+                      <div
+                        className="w-full h-full bg-cover bg-top bg-gray-200"
+                        style={{ backgroundImage: `url(${member.image})` }}
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -104,7 +101,7 @@ export default function LeadershipPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
